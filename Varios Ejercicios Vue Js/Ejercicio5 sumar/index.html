@@ -1,0 +1,42 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><Page Title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+
+        
+
+        <div id="app">
+        
+        <button v-on:click="contar()">Sumar</button>
+        <p>{{contador}}</p>
+        <button v-on:click="contar2(4)">Sumar2</button>
+        <p>{{contador2}}</p>
+        
+        </div>
+    <script>
+        new Vue({
+                el: "#app",
+                data: {
+                contador:0,
+                contador2:0
+            },
+            methods:{
+                contar(){
+                    this.contador ++; 	
+                },
+                contar2(num){
+                    this.contador2 += num; 	
+                }
+            }
+        })
+    </script>
+</body>
+</html>

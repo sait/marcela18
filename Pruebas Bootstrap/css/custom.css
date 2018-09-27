@@ -1,0 +1,53 @@
+.bg-pink{
+    background-color: pink
+}
+
+#text-red{
+    color:red;
+}
+
+#text-green{
+    color:green;
+}
+
+#text-blue{
+    color:blue;
+}
+
+#font-darleston{
+    font-family: 'Darleston', cursive;
+    src: url("fonts/Darleston.ttf") format('truetype');
+}
+
+#font-FOO{
+    font-family: 'FOO', cursive;
+    src: url("fonts/FOO.ttf") format('truetype');
+}
+
+@font-face{
+    font-family: 'FOO', cursive;
+    src: url("fonts/FOO.ttf") format('truetype');
+
+    font-family: 'Darleston', cursive;
+    src: url("fonts/Darleston.ttf") format('truetype');
+
+    font-family: 'QuitWork', cursive;
+    src: url("fonts/Quitwork.ttf") format('truetype');
+
+    font-family: 'TimeMachine', cursive;
+    src: url("fonts/TimeMachine.ttf") format('truetype');
+    
+}
+li{
+    font-family: 'Quitwork'
+}
+
+p{
+    font-family: 'TimeMachine'
+}
+
+h1{
+    font-family: 'Darlestone'
+}
+
+

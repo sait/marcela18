@@ -1,0 +1,52 @@
+<! DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <button v-on:click="contador++">Incrementar</button>
+        <button v-on:click="contador--">Reducir</button>
+        <button v-on:click="segundoContador++">Segundo Incrementar </button>
+        <button v-on:click="segundoContador--">Segundo Reducir </button>
+        <p>Contador: {{contador}} | {{segundoContador}} </p>
+        <p>Resultado: {{resultado()}} | {{salida}}</p>
+        
+        </div>
+        
+        <script src="https://unpkg.com/vue@2.5.17/dist/vue.js"></script>
+
+        <script>
+        new Vue({
+                el: "#app",
+                    data: {
+                contador:0,
+                segundoContador:0  	
+                },
+                watch:{
+                    contador(){
+                    console.log('Cambie!')}
+                    },
+                    computed:{
+                        salida(){
+                    console.log('Computed!')
+                    return this.segundoContador > 5 ? "Mayor que 5" : "Menor que 5"
+                    }
+                },
+                methods: {
+                    resultado(){
+                        console.log('Method')
+                    return this.contador >  5 ? "Mayor que 5" : "Menor que 5"
+                    }   
+                    }
+  });
+        
+        </script>
+</body>
+</html>

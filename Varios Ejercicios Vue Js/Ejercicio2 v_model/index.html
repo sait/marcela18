@@ -1,0 +1,47 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+       
+</head>
+<body>
+
+     <div id="app">
+        <input  type="text" v-model.number="texto">
+        <p>Solo numeros</p>
+        <input  type="text" v-model.trim="texto2">
+        <p>Quita espacios antes y despues</p>
+        <input  type="text" v-model.lazy="texto3">
+        <p>Copia hasta dar enter</p>
+        <input  type="text" v-model.number.trim.lazy="texto4">
+        <p>Toda las anteriores</p>
+        <p>{{ texto }}</p> 
+        <p>{{ texto2 }}</p>
+        <p>{{ texto3 }}</p>
+        <p>{{ texto4 }}</p>
+    </div>
+
+    <script>
+    new Vue({
+        el : "#app",
+        data: {
+	        texto :'',
+            texto2 :'',
+            texto3 :'',
+            texto4 :''
+
+
+
+
+        }
+    })
+    </script>
+</body>
+</html>

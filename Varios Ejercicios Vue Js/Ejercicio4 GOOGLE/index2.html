@@ -1,0 +1,28 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+<div id="app">
+  <!-- Binding -->
+    <a href="http://www.google.com">Google</a>
+    <a :href="google" :class="color" style="" id="">Google</a>
+</div>
+
+<script>
+
+new Vue({
+	el : "#app",
+  data: {
+  	google:'http://www.google.com',
+    color : 'verde'
+  }
+});
+</script>
+
+<style>
+
+.verde {
+    color:green;
+  }
+</style>
+.verde {
+    color:green;
+  }
